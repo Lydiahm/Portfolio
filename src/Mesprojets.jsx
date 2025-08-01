@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import MicroMind from './assets/images/micromind.png';
 import MicroMind1 from './assets/images/micromind1.png';
 import MicroMind2 from './assets/images/micromind2.png';
-import MicroMind3 from './assets/images/micromind3.png';
+import MicroMind3 from './assets/images/Micromind3.png';
 import MicroMind4 from './assets/images/micromind4.png';
 import LuminiskinImg from './assets/images/Luminiskin1.png';  // Remplace par le chemin correct
 import LuminiSkinImg from './assets/images/LuminiSkin.png';
