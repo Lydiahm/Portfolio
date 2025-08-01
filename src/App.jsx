@@ -151,18 +151,22 @@ function App() {
         À propos
       </h2>
       <p className="text-gray-300 text-lg mb-8">
-        Étudiante en informatique à la recherche d’une alternance pour
-        2025, j’ai acquis de l’expérience en développement web, en
-        analyse Big Data et en gestion de projet. Je suis autonome,
-        motivée et rigoureuse.
+Étudiante en informatique à la recherche d'une alternance pour la rentrée 2025,
+        j'ai acquis une solide expérience en développement web full-stack,
+        développement mobile, ainsi qu'en analyse de Big Data et 
+        Machine Learning. J'ai également dirigé plusieurs projets en 
+        utilisant des méthodologies agiles, renforçant ainsi mes 
+        compétences en gestion d'équipe et de projet. Autonome, rigoureuse 
+        et passionnée par les nouvelles technologies, je suis prête à relever
+        de nouveaux défis.
       </p>
 
       {/* 📊 Cartes interactives */}
       <div className="grid grid-cols-3 gap-8 text-center">
         {[
           { label: "Années d’expérience", value: "3+" },
-          { label: "Projets réalisés", value: "5+" },
-          { label: "Domaines d’expertise", value: "3" },
+          { label: "Projets réalisés", value: "11+" },
+          { label: "Domaines d’expertise", value: "8" },
         ].map((item, i) => (
           <div
             key={i}
