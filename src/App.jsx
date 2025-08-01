@@ -5,6 +5,8 @@ import Experiences from "./Experiences";
 import Contact from "./Contact";
 import { useState } from "react";
 
+import profileImage from './assets/images/IMG_2452-removebg-preview.png';
+
 // Fonction pour gérer les clics du menu
 const handleLinkClick = (event, sectionId, closeMenu) => {
   event.preventDefault(); // Empêche le scroll automatique
@@ -88,33 +90,41 @@ function App() {
         </div>
       </div>
 
-{/* 🖼️ Hero Section */}
-<section id="accueil" className="relative h-screen overflow-hidden snap-start bg-black text-white">
-  {/* Arrière-plan avec effet de zoom */}
-  <div className="absolute inset-0 z-0 parallax-zoom" />
+      {/* 🖼️ Hero Section */}
+      <section id="accueil" className="relative h-screen overflow-hidden snap-start bg-black text-white">
+        {/* Arrière-plan avec effet de zoom */}
+        <div className="absolute inset-0 z-0 parallax-zoom" />
 
-  {/* Contenu au premier plan */}
-  <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-4">
-    <h1 className="font-syncopate text-5xl md:text-7xl lg:text-8xl mb-4">
-      Lydia Hamza
-    </h1>
-    <p className="text-gray-400 text-lg mb-8">
-      Développeuse Full Stack & Data Analyst
-    </p>
-    <button
-      className="bg-blue-600 hover:bg-pink-800 text-white rounded-full px-6 py-3 transition-all"
-      onClick={(e) => handleLinkClick(e, 'projets', closeMenu)}  // Mise à jour ici
-    >
-      DÉCOUVRIR MES PROJETS
-    </button>
+        {/* Contenu au premier plan */}
+        <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-4">
+          {/* 🧑‍💼 Ta photo */}
+          <div className="mb-6">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-600 to-indigo-500 relative shadow-xl overflow-hidden">
+              <img src={profileImage} alt="Lydia Hamza" className="w-full h-full object-cover" />
+            </div>
+          </div>
 
-    <div className="mt-20 flex flex-col items-center">
-      <div className="relative h-10 w-1 bg-gray-800 rounded-full overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-blue-600 rounded-full animate-scrollLine" />
-      </div>
-    </div>
-  </div>
-</section>
+          {/* Ton nom */}
+          <h1 className="font-syncopate text-5xl md:text-7xl lg:text-8xl mb-4">
+            Lydia Hamza
+          </h1>
+          <p className="text-gray-400 text-lg mb-8">
+            Développeuse Full Stack & Data Analyst
+          </p>
+          <button
+            className="bg-blue-600 hover:bg-pink-800 text-white rounded-full px-6 py-3 transition-all"
+            onClick={(e) => handleLinkClick(e, 'projets', closeMenu)}  // Mise à jour ici
+          >
+            DÉCOUVRIR MES PROJETS
+          </button>
+
+          <div className="mt-20 flex flex-col items-center">
+            <div className="relative h-10 w-1 bg-gray-800 rounded-full overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-full bg-blue-600 rounded-full animate-scrollLine" />
+            </div>
+          </div>
+        </div>
+      </section>
 
 
 {/* 🧑‍💻 Profil Section */}
