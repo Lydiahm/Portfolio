@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Syncopate&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Syncopate */
+.syncopate-regular {
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Michroma par défaut */
+body {
+  font-family: 'Michroma', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Scroll snapping */
+html,
+body,
+#root {
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-padding-top: 5rem; /* évite que le header fixe cache le haut */
+}
+
+/* Ligne animée verticale (section d’accueil) */
+@keyframes scrollLine {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.animate-scrollLine {
+  animation: scrollLine 1.5s infinite;
+}
+
+/* Animation du blob SVG */
+@keyframes blobFloat {
+  0% {
+    transform: translate(0, 0) scale(1);
+    border-radius: 50% 50% 50% 50%;
+  }
+  25% {
+    transform: translate(20px, -10px) scale(1.05);
+    border-radius: 60% 40% 60% 40%;
+  }
+  50% {
+    transform: translate(-20px, 10px) scale(1.1);
+    border-radius: 40% 60% 40% 60%;
+  }
+  75% {
+    transform: translate(10px, -20px) scale(0.95);
+    border-radius: 50% 60% 50% 40%;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    border-radius: 50% 50% 50% 50%;
+  }
+}
+
+.animate-blobFloat {
+  animation: blobFloat 8s ease-in-out infinite;
+}
+
+/* Arrière-plan avec zoom progressif */
+.parallax-zoom {
+  background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/sakura.png');
+  background-size: cover;
+  background-position: center;
+  transform-origin: center;
+  animation: zoomIn 30s ease-in-out infinite alternate;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation de zoom */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
