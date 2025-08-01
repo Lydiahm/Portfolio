@@ -258,7 +258,6 @@ function App() {
             <p className="text-sm text-blue-500">2020</p>
             <h3 className="text-xl font-bold mt-1">Baccalauréat Français</h3>
             <p className="text-gray-400 text-sm mt-1">
-              Université des sciences et technologies Houari Boumedienne
             </p>
           </div>
         </div>
